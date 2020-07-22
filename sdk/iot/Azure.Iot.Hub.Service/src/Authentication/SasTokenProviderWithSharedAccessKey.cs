@@ -13,7 +13,7 @@ namespace Azure.Iot.Hub.Service.Authentication
     {
         // Time buffer before expiry when the token should be renewed, expressed as a percentage of the time to live.
         // The token will be renewed when it has 15% or less of the sas token's lifespan left.
-        private const int s_renewalTimeBufferPercentage = 15;
+        private const int RenewalTimeBufferPercentage = 15;
 
         private readonly object _lock = new object();
 
@@ -53,7 +53,7 @@ namespace Azure.Iot.Hub.Service.Authentication
         {
             lock (_lock)
             {
-                if (ShouldTokenBeRenewed())
+                if (TokenShouldBeGenerated())
                 {
                     var builder = new SharedAccessSignatureBuilder
                     {
@@ -71,16 +71,16 @@ namespace Azure.Iot.Hub.Service.Authentication
             }
         }
 
-        private bool ShouldTokenBeRenewed()
+        private bool TokenShouldBeGenerated()
         {
-            // The token is considered expired if this is the first time it is being accessed (not cached yet)
+            // The token needs to be generated if this is the first time it is being accessed (not cached yet)
             // or the current time is greater than or equal to the token expiry time, less 15% buffer.
             if (_cachedSasToken == null)
             {
                 return true;
             }
 
-            var bufferTimeInMilliseconds = (double)s_renewalTimeBufferPercentage / 100 * _timeToLive.TotalMilliseconds;
+            var bufferTimeInMilliseconds = (double)RenewalTimeBufferPercentage / 100 * _timeToLive.TotalMilliseconds;
             DateTimeOffset tokenExpiryTimeWithBuffer = _tokenExpiryTime.AddMilliseconds(-bufferTimeInMilliseconds);
             return DateTimeOffset.UtcNow.CompareTo(tokenExpiryTimeWithBuffer) >= 0;
         }
