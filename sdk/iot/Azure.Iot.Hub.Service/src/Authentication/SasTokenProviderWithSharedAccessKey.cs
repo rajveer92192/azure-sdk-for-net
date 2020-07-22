@@ -53,7 +53,7 @@ namespace Azure.Iot.Hub.Service.Authentication
         {
             lock (_lock)
             {
-                if (IsTokenExpired())
+                if (ShouldTokenBeRenewed())
                 {
                     var builder = new SharedAccessSignatureBuilder
                     {
@@ -71,7 +71,7 @@ namespace Azure.Iot.Hub.Service.Authentication
             }
         }
 
-        private bool IsTokenExpired()
+        private bool ShouldTokenBeRenewed()
         {
             // The token is considered expired if this is the first time it is being accessed (not cached yet)
             // or the current time is greater than or equal to the token expiry time, less 15% buffer.
