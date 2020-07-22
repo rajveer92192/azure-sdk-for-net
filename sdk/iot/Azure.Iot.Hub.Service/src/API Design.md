@@ -20,7 +20,60 @@ Desired - PnpDesired
 <details><summary><b>Constructors</b></summary>
 
 ```csharp
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="connectionString">
+/// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
+/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+/// </param>
+public IoTHubServiceClient(string connectionString) {}
 
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="connectionString">
+/// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
+/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+/// </param>
+/// <param name="options">
+/// Options that allow configuration of requests sent to the IoT Hub service.
+/// </param>
+public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions options) {}
+
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="hostName">
+/// The IoT Hub service instance host to connect to.
+/// </param>
+/// <param name="sharedAccessPolicy">
+/// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
+/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+/// </param>
+/// <param name="sharedAccessKey">
+/// The IoT Hub shared access key associated with the shared access policy permissions."/>
+/// </param>
+public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey) {}
+
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="hostName">
+/// param name="hostName">
+/// The IoT Hub service instance host to connect to.
+/// </param>
+/// <param name="sharedAccessPolicy">
+/// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
+/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+/// </param>
+/// <param name="sharedAccessKey">
+/// The IoT Hub shared access key associated with the shared access policy permissions."/>
+/// </param>
+/// <param name="options">
+/// Options that allow configuration of requests sent to the IoT Hub service.
+/// </param>
+public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey, IoTHubServiceClientOptions options) {}
 ```
 
 </details>

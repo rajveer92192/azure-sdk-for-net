@@ -133,7 +133,6 @@ namespace Azure.Iot.Hub.Service
         /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
         /// </summary>
         /// <param name="hostName">
-        /// param name="hostName">
         /// The IoT Hub service instance host to connect to.
         /// </param>
         /// <param name="sharedAccessPolicy">
