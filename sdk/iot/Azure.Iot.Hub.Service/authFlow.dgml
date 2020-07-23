@@ -1,132 +1,191 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1 @3 @10 Member=s_renewalTimeBufferPercentage)" Category="CodeSchema_Field" Bounds="-153.276627473376,215.902175088501,204.57,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="s_renewalTimeBufferPercentage" UseManualLocation="True" />
-    <Node Id="(@1 @3 @5 Member=(Name=.ctor OverloadingParameters=[@18]))" Category="CodeSchema_Method" Bounds="361.263243642487,147.807988000784,164.296666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="IotHubConnectionString" />
-    <Node Id="(@1 @3 @5 Member=HostName)" Category="CodeSchema_Property" Bounds="427.516598715077,259.728298047815,114.855728120715,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HostName" />
-    <Node Id="(@1 @3 @5 Member=HostNameIdentifier)" Category="CodeSchema_Field" Bounds="190.443250254629,147.807988000784,140.82,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="HostNameIdentifier" />
-    <Node Id="(@1 @3 @5 Member=SharedAccessKey)" Category="CodeSchema_Property" Bounds="190.443265381744,315.688298048773,149.412394787382,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessKey" />
-    <Node Id="(@1 @3 @5 Member=SharedAccessKeyIdentifier)" Category="CodeSchema_Field" Bounds="190.443252492585,203.768101526175,175.376666666667,25.9600000000001" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessKeyIdentifier" />
-    <Node Id="(@1 @3 @5 Member=SharedAccessKeyNameIdentifier)" Category="CodeSchema_Field" Bounds="190.443265869457,259.728184533987,207.073333333333,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessKeyNameIdentifier" />
-    <Node Id="(@1 @3 @5 Member=SharedAccessPolicy)" Category="CodeSchema_Property" Bounds="369.855660169127,315.688298047837,160.995728120715,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessPolicy" />
-    <Node Id="@11" Category="CodeSchema_Class" Bounds="851.386775667927,259.180850289142,269.78,25" CodeSchemaProperty_IsInternal="True" CommonLabel="SasTokenProviderWithSharedAccessKey" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="12" Group="Collapsed" Icon="CodeSchema_Class" Label="SasTokenProviderWithSharedAccessKey" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SasTokenProviderWithSharedAccessKey.cs StartLineNumber=11 StartCharacterOffset=19 EndLineNumber=11 EndCharacterOffset=54)" UseManualLocation="True" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="330.780998159089,390.688472717581,819.231194825315,253.840433764649" CodeSchemaProperty_IsInternal="True" CommonLabel="SharedAccessSignatureBuilder" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="9" Group="Expanded" Icon="CodeSchema_Class" Label="SharedAccessSignatureBuilder" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SharedAccessSignatureBuilder.cs StartLineNumber=15 StartCharacterOffset=19 EndLineNumber=15 EndCharacterOffset=47)" />
-    <Node Id="@15" Category="CodeSchema_Method" Bounds="1394.96072105948,182.288121057425,101.386666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="AddHeaders" />
-    <Node Id="@16" Category="CodeSchema_Method" Bounds="1171.10887128734,182.288121057425,193.09,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenAuthenticationPolicy" />
-    <Node Id="@19" Category="CodeSchema_Method" Bounds="350.781011586823,542.608723474417,115.466666666667,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="BuildExpiresOn" />
-    <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="07/22/2020 07:53:13" Bounds="130.420973268911,6.32671595624448,1442.04032076242,678.202390525985" CodeSchemaProperty_StrongName="Azure.Iot.Hub.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8" CommonLabel="Azure.Iot.Hub.Service" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(e33d09d9-d809-472c-82e6-6a26bdb86fc2.OutputPath)" Group="Expanded" Label="Azure.Iot.Hub.Service.dll" UseManualLocation="True" />
-    <Node Id="@21" Category="CodeSchema_Method" Bounds="1285.68899335766,126.328121972952,75.9300000000001,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="Process" />
-    <Node Id="@22" Category="CodeSchema_Method" Bounds="1392.20226565583,126.328121972952,106.903333333333,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="ProcessAsync" />
-    <Node Id="@23" Category="CodeSchema_Method" Bounds="496.945981069245,542.608601404105,59.1366666666667,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="Sign" />
-    <Node Id="@24" Category="CodeSchema_Method" Bounds="585.046854410132,48.0665374791681,244.78,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenProviderWithSharedAccessKey" UseManualLocation="True" />
-    <Node Id="@25" Category="CodeSchema_Method" Bounds="351.964329661367,486.648579431448,113.1,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="BuildSignature" />
-    <Node Id="@26" Category="CodeSchema_Method" Bounds="859.991854410132,48.0665374791681,244.78,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenProviderWithSharedAccessKey" UseManualLocation="True" />
-    <Node Id="@27" Category="CodeSchema_Method" Bounds="350.780998159089,598.56880648223,195.626666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessSignatureBuilder" />
-    <Node Id="@28" Category="CodeSchema_Field" Bounds="6.4100391932904,159.942175088501,128.056666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_cachedSasToken" UseManualLocation="True" />
-    <Node Id="@29" Category="CodeSchema_Field" Bounds="150.11003919329,103.982175088501,96.6566666666666,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_hostName" UseManualLocation="True" />
-    <Node Id="@30" Category="CodeSchema_Field" Bounds="612.737787743465,104.015345479168,63.4233333333333,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_lock" UseManualLocation="True" />
-    <Node Id="@31" Category="CodeSchema_Field" Bounds="1378.88232669099,238.248112512503,133.543333333333,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sasTokenProvider" />
-    <Node Id="@32" Category="CodeSchema_Field" Bounds="450.643387743465,104.015345479168,131.663333333333,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sharedAccessKey" UseManualLocation="True" />
-    <Node Id="@33" Category="CodeSchema_Field" Bounds="276.885321076798,104.015345479168,143.246666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sharedAccessPolicy" UseManualLocation="True" />
-    <Node Id="@34" Category="CodeSchema_Field" Bounds="165.388787743465,159.964153479168,98.2933333333333,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_timeToLive" UseManualLocation="True" />
-    <Node Id="@35" Category="CodeSchema_Field" Bounds="-153.276627473376,159.942175088501,129.43,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_tokenExpiryTime" UseManualLocation="True" />
-    <Node Id="@36" Category="CodeSchema_Method" Bounds="-79.1566274733761,48.0221750885009,397.19,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="Azure‎.Iot‎.Hub‎.Service‎.Authentication‎.ISasTokenProvider‎.GetSasToken" UseManualLocation="True" />
-    <Node Id="@37" Category="CodeSchema_Method" Bounds="1206.89929039542,354.202397180472,103.326666666667,25.96" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="GetSasToken" />
-    <Node Id="@38" Category="CodeSchema_Property" Bounds="643.086464863688,487.128593662572,114.855728120715,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HostName" />
-    <Node Id="@39" Category="CodeSchema_Method" Bounds="-25.8199608067096,103.982175088501,114.516666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="IsTokenExpired" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="150.420973268911,46.3268159562445,1402.04032076242,618.202190525985" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Azure.Iot.Hub.Service.Authentication" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="Azure.Iot.Hub.Service.Authentication" UseManualLocation="True" />
-    <Node Id="@40" Category="CodeSchema_Property" Bounds="788.808131530355,487.128593662572,149.412394787382,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessKey" />
-    <Node Id="@41" Category="CodeSchema_Property" Bounds="969.016464863689,487.128593662572,160.995728120715,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessPolicy" />
-    <Node Id="@42" Category="CodeSchema_Property" Bounds="496.023131530356,487.128593662572,116.982394787382,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="TimeToLive" />
-    <Node Id="@43" Category="CodeSchema_Method" Bounds="651.165950551667,430.688572717581,98.6966666666667,25.96" CodeSchemaProperty_IsInternal="True" DelayedCrossGroupLinksState="Fetched" Label="ToSignature" />
-    <Node Id="@6" Category="CodeSchema_Class" Bounds="170.420973268911,107.80787950469,391.929083193305,252.880527040177" CodeSchemaProperty_IsInternal="True" CommonLabel="IotHubConnectionString" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="7" Group="Expanded" Icon="CodeSchema_Class" Label="IotHubConnectionString" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/IotHubConnectionString.cs StartLineNumber=10 StartCharacterOffset=19 EndLineNumber=10 EndCharacterOffset=41)" UseManualLocation="True" />
-    <Node Id="@7" Category="CodeSchema_Interface" Bounds="1180.04429039542,314.207415956244,157.036666666667,85.9602" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsInternal="True" CommonLabel="ISasTokenProvider" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Expanded" Icon="CodeSchema_Interface" Label="ISasTokenProvider" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/ISasTokenProvider.cs StartLineNumber=8 StartCharacterOffset=23 EndLineNumber=8 EndCharacterOffset=40)" />
-    <Node Id="@9" Category="CodeSchema_Class" Bounds="1151.14450529435,86.3269159562444,381.316788736979,197.8804" CodeSchemaProperty_IsInternal="True" CommonLabel="SasTokenAuthenticationPolicy" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Icon="CodeSchema_Class" Label="SasTokenAuthenticationPolicy" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SasTokenAuthenticationPolicy.cs StartLineNumber=14 StartCharacterOffset=19 EndLineNumber=14 EndCharacterOffset=47)" />
+    <Node Id="(@44 @55 @64 Member=HostNameIdentifier)" Category="CodeSchema_Field" Bounds="-57.4832008922615,0.969240582759447,140.82,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="HostNameIdentifier" />
+    <Node Id="(@44 @55 @64 Member=SharedAccessKeyIdentifier)" Category="CodeSchema_Field" Bounds="-57.4831986543059,56.9292320378376,175.376666666667,25.9600000000001" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessKeyIdentifier" />
+    <Node Id="(@44 @55 @64 Member=SharedAccessKeyNameIdentifier)" Category="CodeSchema_Field" Bounds="-57.4831814627366,112.889192975338,207.073333333333,25.9600000000001" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessKeyNameIdentifier" />
+    <Node Id="(@44 @55 @69 Member=s_renewalTimeBufferPercentage)" Category="CodeSchema_Field" Bounds="-94.4510906546496,-127.623660991687,204.57,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="s_renewalTimeBufferPercentage" />
+    <Node Id="@100" Category="CodeSchema_Method" Bounds="598.343954663954,-295.5036658745,397.19,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="Azure‎.Iot‎.Hub‎.Service‎.Authentication‎.ISasTokenProvider‎.GetSasToken" />
+    <Node Id="@101" Category="CodeSchema_Method" Bounds="839.56097822112,-11.6634986223654,103.326666666667,25.96" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="GetSasToken" />
+    <Node Id="@102" Category="CodeSchema_Property" Bounds="179.590120803305,112.889260109914,114.855728120715,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HostName" />
+    <Node Id="@103" Category="CodeSchema_Property" Bounds="201.268829293399,601.867054668029,114.855728120715,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HostName" UseManualLocation="True" />
+    <Node Id="@104" Category="CodeSchema_Method" Bounds="827.680621330621,-239.543674419422,114.516666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="IsTokenExpired" />
+    <Node Id="@105" Category="CodeSchema_Property" Bounds="-57.4832125300297,168.84926012811,149.412394787382,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessKey" />
+    <Node Id="@106" Category="CodeSchema_Property" Bounds="346.990495960064,601.867054674976,149.412394787382,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessKey" UseManualLocation="True" />
+    <Node Id="@107" Category="CodeSchema_Property" Bounds="121.929182257354,168.84926012811,160.995728120715,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessPolicy" />
+    <Node Id="@108" Category="CodeSchema_Property" Bounds="527.198829293397,601.867054675652,160.995728120715,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SharedAccessPolicy" UseManualLocation="True" />
+    <Node Id="@109" Category="CodeSchema_Property" Bounds="718.205495960063,601.867054675652,116.982394787382,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="TimeToLive" UseManualLocation="True" />
+    <Node Id="@110" Category="CodeSchema_Method" Bounds="372.348377227879,545.427030051834,98.6966666666667,25.96" CodeSchemaProperty_IsInternal="True" DelayedCrossGroupLinksState="Fetched" Label="ToSignature" UseManualLocation="True" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="588.193773749436,-505.474825855616,167.546666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="IoTHubServiceClient" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="IoTHubServiceClient" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/IoTHubServiceClient.cs StartLineNumber=13 StartCharacterOffset=17 EndLineNumber=13 EndCharacterOffset=36)" />
+    <Node Id="@43" Category="CodeSchema_Assembly" Bounds="572.714659942781,1260.39589417583,139.083333333333,25" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_StrongName="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="C:\Users\abmisr\.nuget\packages\netstandard.library\2.0.3\build\netstandard2.0\ref\netstandard.dll" Group="Collapsed" Label="netstandard.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@45" Category="CodeSchema_Assembly" AssemblyTimestamp="07/22/2020 07:53:13" Bounds="-154.451088104248,-585.508454180393,1679.34343917847,839.359589814873" CodeSchemaProperty_StrongName="Azure.Iot.Hub.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8" CommonLabel="Azure.Iot.Hub.Service" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(e33d09d9-d809-472c-82e6-6a26bdb86fc2.OutputPath)" Group="Expanded" Label="Azure.Iot.Hub.Service.dll" />
+    <Node Id="@47" Category="CodeSchema_Assembly" Bounds="572.714659942781,1233.39675814818,133.396666666667,25" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_StrongName="Azure.Core, Version=1.2.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="C:\Users\abmisr\.nuget\packages\azure.core\1.2.2\lib\netstandard2.0\Azure.Core.dll" Group="Collapsed" Label="Azure.Core.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@49" Category="CodeSchema_Namespace" Bounds="689.889465508089,-430.507172832262,114.919072426667,25.0038707327999" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Azure‎.Core" UseManualLocation="True" />
+    <Node Id="@50" Category="CodeSchema_Namespace" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Azure‎.Core" UseManualLocation="True" />
+    <Node Id="@52" Category="CodeSchema_Namespace" Bounds="500.536032174755,-430.507172832262,159.353333333333,25" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Azure‎.Core‎.Pipeline" UseManualLocation="True" />
+    <Node Id="@53" Category="CodeSchema_Namespace" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Azure‎.Core‎.Pipeline" UseManualLocation="True" />
+    <Node Id="@54" Category="CodeSchema_Namespace" Bounds="568.193773749436,-545.507372832262,207.546666666667,85.0002" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Azure.Iot.Hub.Service" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="Azure.Iot.Hub.Service" />
+    <Node Id="@56" Category="CodeSchema_Namespace" Bounds="-134.451088104248,-375.502842881144,1639.34343917847,609.353878515625" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Azure.Iot.Hub.Service.Authentication" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="Azure.Iot.Hub.Service.Authentication" />
+    <Node Id="@58" Category="CodeSchema_Namespace" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="System" UseManualLocation="True" />
+    <Node Id="@59" Category="CodeSchema_Class" Bounds="30.000008008735,947.985214747085,150.096666666667,85.9602000000001" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="Argument" UseManualLocation="True" />
+    <Node Id="@60" Category="CodeSchema_Type" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Array" UseManualLocation="True" />
+    <Node Id="@61" Category="CodeSchema_Class" Bounds="683.714510888652,1083.73490133252,167.393333333333,85.9602" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="ClientDiagnostics" UseManualLocation="True" />
+    <Node Id="@62" Category="CodeSchema_Type" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ClientOptions" UseManualLocation="True" />
+    <Node Id="@63" Category="CodeSchema_Type" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HttpPipelineBuilder" UseManualLocation="True" />
+    <Node Id="@65" Category="CodeSchema_Class" Bounds="-77.4832125300297,-39.029565073078,391.92906145405,252.8805" CodeSchemaProperty_IsInternal="True" CommonLabel="IotHubConnectionString" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="7" Group="Expanded" Icon="CodeSchema_Class" Label="IotHubConnectionString" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/IotHubConnectionString.cs StartLineNumber=10 StartCharacterOffset=19 EndLineNumber=10 EndCharacterOffset=41)" UseManualLocation="True" />
+    <Node Id="@66" Category="CodeSchema_Interface" Bounds="812.70597822112,-51.6628872399061,157.036666666667,85.9602" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsInternal="True" CommonLabel="ISasTokenProvider" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Expanded" Icon="CodeSchema_Interface" Label="ISasTokenProvider" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/ISasTokenProvider.cs StartLineNumber=8 StartCharacterOffset=23 EndLineNumber=8 EndCharacterOffset=40)" />
+    <Node Id="@68" Category="CodeSchema_Class" Bounds="1119.65404321986,-279.543287239907,365.238272298177,197.880306713867" CodeSchemaProperty_IsInternal="True" CommonLabel="SasTokenAuthenticationPolicy" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Icon="CodeSchema_Class" Label="SasTokenAuthenticationPolicy" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SasTokenAuthenticationPolicy.cs StartLineNumber=14 StartCharacterOffset=19 EndLineNumber=14 EndCharacterOffset=47)" />
+    <Node Id="@70" Category="CodeSchema_Class" Bounds="-114.45109065465,-335.503302099462,1204.10495376587,253.840220141602" CodeSchemaProperty_IsInternal="True" CommonLabel="SasTokenProviderWithSharedAccessKey" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="12" Group="Expanded" Icon="CodeSchema_Class" Label="SasTokenProviderWithSharedAccessKey" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SasTokenProviderWithSharedAccessKey.cs StartLineNumber=11 StartCharacterOffset=19 EndLineNumber=11 EndCharacterOffset=54)" />
+    <Node Id="@72" Category="CodeSchema_Class" Bounds="385.469578985234,-51.6628872399062,220.626666666667,25.0000000000001" CodeSchemaProperty_IsInternal="True" CommonLabel="SharedAccessSignatureBuilder" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="9" Group="Collapsed" Icon="CodeSchema_Class" Label="SharedAccessSignatureBuilder" SourceLocation="(Assembly=file:///C:/MyData/SourceCode/csharp/azure-sdk-for-net/sdk/iot/Azure.Iot.Hub.Service/src/Authentication/SharedAccessSignatureBuilder.cs StartLineNumber=15 StartCharacterOffset=19 EndLineNumber=15 EndCharacterOffset=47)" UseManualLocation="True" />
+    <Node Id="@73" Category="CodeSchema_Method" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Empty" UseManualLocation="True" />
+    <Node Id="@75" Category="CodeSchema_Method" Bounds="703.714499853591,1123.73453335195,127.393333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="ClientDiagnostics" />
+    <Node Id="@76" Category="CodeSchema_Method" Bounds="1139.65404321986,-183.583659559866,101.386666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="AddHeaders" />
+    <Node Id="@77" Category="CodeSchema_Method" Bounds="1271.80231551804,-183.583659559866,193.09,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenAuthenticationPolicy" />
+    <Node Id="@79" Category="CodeSchema_Method" Bounds="113.336868789542,0.969240582759447,164.296666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="IotHubConnectionString" />
+    <Node Id="@80" Category="CodeSchema_Method" Bounds="56.9633467103009,657.347012961991,115.466666666667,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="BuildExpiresOn" UseManualLocation="True" />
+    <Node Id="@82" Category="CodeSchema_Method" Bounds="1152.38243758835,-239.543666273734,75.9300000000003,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="Process" />
+    <Node Id="@83" Category="CodeSchema_Method" Bounds="1258.89570988653,-239.543666273733,106.903333333333,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="ProcessAsync" />
+    <Node Id="@84" Category="CodeSchema_Method" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Build" UseManualLocation="True" />
+    <Node Id="@85" Category="CodeSchema_Method" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="AddPolicy" UseManualLocation="True" />
+    <Node Id="@86" Category="CodeSchema_Method" Bounds="203.128346710301,657.347012961991,59.1366666666667,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="Sign" UseManualLocation="True" />
+    <Node Id="@87" Category="CodeSchema_Method" Bounds="180.548954663954,-295.503681133289,244.78,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsInternal="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenProviderWithSharedAccessKey" />
+    <Node Id="@88" Category="CodeSchema_Method" Bounds="58.1466953024235,601.387052024491,113.1,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="BuildSignature" UseManualLocation="True" />
+    <Node Id="@89" Category="CodeSchema_Method" Bounds="50.000008008735,987.984232275229,110.096666666667,25.96" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="AssertNotNull" />
+    <Node Id="@90" Category="CodeSchema_Method" Bounds="-94.451045336046,-295.503681133289,244.78,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SasTokenProviderWithSharedAccessKey" />
+    <Node Id="@91" Category="CodeSchema_Method" Bounds="56.9633638001446,713.307034934647,195.626666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SharedAccessSignatureBuilder" UseManualLocation="True" />
+    <Node Id="@92" Category="CodeSchema_Field" Bounds="652.910529777886,-183.583698223133,128.056666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_cachedSasToken" />
+    <Node Id="@93" Category="CodeSchema_Field" Bounds="669.610499260308,-239.543674419422,96.6566666666666,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_hostName" />
+    <Node Id="@94" Category="CodeSchema_Field" Bounds="208.227287997287,-239.543704937,63.4233333333332,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_lock" />
+    <Node Id="@95" Category="CodeSchema_Field" Bounds="1301.57564885137,-127.623698622366,133.543333333333,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sasTokenProvider" />
+    <Node Id="@96" Category="CodeSchema_Field" Bounds="334.107211703342,-239.543704937,131.663333333333,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sharedAccessKey" />
+    <Node Id="@97" Category="CodeSchema_Field" Bounds="496.315545036675,-239.543704937,143.246666666667,25.9599999999999" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_sharedAccessPolicy" />
+    <Node Id="@98" Category="CodeSchema_Field" Bounds="811.792257479709,-183.583682964343,98.2933333333333,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_timeToLive" />
+    <Node Id="@99" Category="CodeSchema_Field" Bounds="940.22386311122,-183.583698223133,129.43,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_tokenExpiryTime" />
+    <Node Id="_standardGraphExternalsGroup" Category="Externals" Bounds="819.808057830105,-719.044219169955,86.99,25" Group="Collapsed" Label="Externals" LayoutSettings="List" UseManualLocation="True" />
   </Nodes>
   <Links>
-    <Link Source="@11" Target="(@1 @3 @10 Member=s_renewalTimeBufferPercentage)" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@24" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@26" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@28" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@29" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@30" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@32" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@33" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@34" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@35" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@36" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@39" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@7" Category="Implements" Bounds="1026.06252940899,284.180850289142,144.918098494911,45.5053026833583" Weight="1" />
-    <Link Source="@13" Target="@19" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@23" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@25" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@27" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@38" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@40" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@41" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@42" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@43" Category="Contains" FetchingParent="@13" />
-    <Link Source="@15" Target="@31" Category="CodeSchema_FieldRead" Bounds="1445.65393066406,208.248123168945,0,21" Weight="1" />
-    <Link Source="@15" Target="@37" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@16" Target="@31" Category="CodeSchema_FieldWrite" Bounds="1308.94128417969,208.248123168945,86.839599609375,27.3007965087891" Weight="1" />
-    <Link Source="@16" Target="@7" Category="References" Weight="1" />
-    <Link Source="@2" Target="@4" Category="Contains" FetchingParent="@2" />
-    <Link Source="@21" Target="@15" Category="CodeSchema_Calls" Bounds="1351.95190429688,152.288116455078,57.223388671875,26.2477111816406" Weight="1" />
-    <Link Source="@22" Target="@15" Category="CodeSchema_Calls" Bounds="1445.65393066406,152.288116455078,0,21" Weight="1" />
-    <Link Source="@24" Target="@28" Category="CodeSchema_FieldWrite" Bounds="132.952667236328,73.982177734375,574.485687255859,84.5222473144531" Weight="1" />
-    <Link Source="@24" Target="@29" Category="CodeSchema_FieldWrite" Bounds="255.148956298828,71.3881607055664,329.927032470703,32.4171371459961" Weight="1" />
-    <Link Source="@24" Target="@30" Category="CodeSchema_FieldWrite" Bounds="665.780090332031,73.982177734375,27.0453491210938,24.0231094360352" Weight="1" />
-    <Link Source="@24" Target="@32" Category="CodeSchema_FieldWrite" Bounds="569.378051757813,73.982177734375,93.7576293945313,27.4695129394531" Weight="1" />
-    <Link Source="@24" Target="@33" Category="CodeSchema_FieldWrite" Bounds="428.725646972656,73.982177734375,195.442199707031,30.4650268554688" Weight="1" />
-    <Link Source="@24" Target="@34" Category="CodeSchema_FieldWrite" Bounds="272.564514160156,73.982177734375,459.067749023438,95.0063781738281" Weight="1" />
-    <Link Source="@25" Target="@19" Category="CodeSchema_Calls" Bounds="408.482482910156,512.687683105469,0,21.0000610351563" Weight="1" />
-    <Link Source="@25" Target="@23" Category="CodeSchema_Calls" Bounds="435.852752685547,512.687683105469,55.2783508300781,26.215087890625" Weight="1" />
-    <Link Source="@26" Target="@30" Category="CodeSchema_FieldWrite" Bounds="684.9306640625,73.982177734375,208.89599609375,33.0667419433594" Weight="1" />
-    <Link Source="@31" Target="@7" Category="References" Weight="1" />
-    <Link Source="@36" Target="@27" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@36" Target="@28" Category="CodeSchema_FieldRead" Bounds="-49.1669883728027,73.982177734375,118.472927093506,82.4194183349609" Weight="2">
+    <Link Source="@100" Target="@103" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@100" Target="@104" Category="CodeSchema_Calls" Bounds="817.350646972656,-269.543670654297,39.58203125,25.1705780029297" Weight="1" />
+    <Link Source="@100" Target="@106" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@100" Target="@108" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@100" Target="@109" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@100" Target="@110" Category="CodeSchema_Calls" Weight="1" />
+    <Link Source="@100" Target="@91" Category="CodeSchema_Calls" Weight="1" />
+    <Link Source="@100" Target="@92" Category="CodeSchema_FieldRead" Bounds="742.869812011719,-269.543670654297,54.069091796875,80.8013153076172" Weight="2">
       <Category Ref="CodeSchema_FieldWrite" />
     </Link>
-    <Link Source="@36" Target="@29" Category="CodeSchema_FieldRead" Bounds="137.76252746582,73.982177734375,35.0075378417969,24.797737121582" Weight="1" />
-    <Link Source="@36" Target="@30" Category="CodeSchema_FieldRead" Bounds="293.186065673828,73.982177734375,310.993133544922,29.7753524780273" Weight="1" />
-    <Link Source="@36" Target="@32" Category="CodeSchema_FieldRead" Bounds="213.533477783203,73.982177734375,228.166473388672,31.83349609375" Weight="1" />
-    <Link Source="@36" Target="@33" Category="CodeSchema_FieldRead" Bounds="172.555236816406,73.982177734375,114.023529052734,27.8635635375977" Weight="1" />
-    <Link Source="@36" Target="@34" Category="CodeSchema_FieldRead" Bounds="119.438369750977,73.982177734375,65.2099761962891,81.3921051025391" Weight="2" />
-    <Link Source="@36" Target="@35" Category="CodeSchema_FieldWrite" Bounds="-88.5616302490234,73.982177734375,148.54377746582,76.9599914550781" Weight="1" />
-    <Link Source="@36" Target="@38" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@36" Target="@39" Category="CodeSchema_Calls" Bounds="59.4446105957031,73.982177734375,39.5820388793945,25.1705780029297" Weight="1" />
-    <Link Source="@36" Target="@40" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@36" Target="@41" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@36" Target="@42" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@36" Target="@43" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@39" Target="@28" Category="CodeSchema_FieldRead" Bounds="40.4844779968262,129.942169189453,15.7618713378906,22.6162719726563" Weight="1" />
-    <Link Source="@39" Target="@34" Category="CodeSchema_FieldRead" Bounds="73.8854751586914,129.942169189453,89.4991989135742,27.3681793212891" Weight="1" />
-    <Link Source="@39" Target="@35" Category="CodeSchema_FieldRead" Bounds="-52.5707702636719,129.942169189453,56.1749756336212,26.1962738037109" Weight="1" />
-    <Link Source="@4" Target="@11" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@13" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@6" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@7" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@9" Category="Contains" FetchingParent="@4" />
-    <Link Source="@43" Target="@25" Category="CodeSchema_Calls" Bounds="473.753143310547,453.204956054688,177.381011962891,33.9940185546875" Weight="1" />
-    <Link Source="@43" Target="@38" Category="CodeSchema_Calls" Bounds="700.482482910156,456.727661132813,0,21.4800109863281" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@43" Target="@40" Category="CodeSchema_Calls" Bounds="738.29052734375,456.727661132813,80.2697143554688,27.5576171875" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@43" Target="@41" Category="CodeSchema_Calls" Bounds="749.830810546875,451.660339355469,213.93505859375,34.30322265625" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@43" Target="@42" Category="CodeSchema_Calls" Bounds="595.498901367188,456.727661132813,71.11865234375,27.2589416503906" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=(Name=.ctor OverloadingParameters=[@18]))" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=HostName)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=HostNameIdentifier)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=SharedAccessKey)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=SharedAccessKeyIdentifier)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=SharedAccessKeyNameIdentifier)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="(@1 @3 @5 Member=SharedAccessPolicy)" Category="Contains" FetchingParent="@6" />
-    <Link Source="@7" Target="@37" Category="Contains" FetchingParent="@7" />
-    <Link Source="@9" Target="@15" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@16" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@21" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@22" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@31" Category="Contains" FetchingParent="@9" />
+    <Link Source="@100" Target="@93" Category="CodeSchema_FieldRead" Bounds="743.607238769531,-269.543670654297,35.0075073242188,24.7977447509766" Weight="1" />
+    <Link Source="@100" Target="@94" Category="CodeSchema_FieldRead" Bounds="280.414916992188,-269.543670654297,339.689208984375,30.8877410888672" Weight="1" />
+    <Link Source="@100" Target="@96" Category="CodeSchema_FieldRead" Bounds="474.677307128906,-269.543670654297,228.16650390625,31.83349609375" Weight="1" />
+    <Link Source="@100" Target="@97" Category="CodeSchema_FieldRead" Bounds="629.798522949219,-269.543670654297,114.023498535156,27.8635559082031" Weight="1" />
+    <Link Source="@100" Target="@98" Category="CodeSchema_FieldRead" Bounds="847.071350097656,-269.543670654297,117.211486816406,81.9373779296875" Weight="2" />
+    <Link Source="@100" Target="@99" Category="CodeSchema_FieldWrite" Bounds="856.395141601563,-269.543670654297,148.543762207031,76.9599914550781" Weight="1" />
+    <Link Source="@104" Target="@92" Category="CodeSchema_FieldRead" Bounds="764.445495605469,-213.583679199219,81.5255737304688,27.1557922363281" Weight="1" />
+    <Link Source="@104" Target="@98" Category="CodeSchema_FieldRead" Bounds="870.053161621094,-213.583679199219,9.31890869140625,21.7286224365234" Weight="1" />
+    <Link Source="@104" Target="@99" Category="CodeSchema_FieldRead" Bounds="912.773071289063,-213.583679199219,56.1749877929688,26.1962738037109" Weight="1" />
+    <Link Source="@110" Target="@103" Category="CodeSchema_Calls" Bounds="303.618929085004,571.388073312565,80.2697328941126,27.5576501209493" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@110" Target="@106" Category="CodeSchema_Calls" Bounds="421.696702173066,571.388073312565,8.81112464412581E-06,21.4800417355231" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@110" Target="@108" Category="CodeSchema_Calls" Bounds="464.839638063859,571.388073312565,92.6911646497726,27.8871079705498" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@110" Target="@109" Category="CodeSchema_Calls" Bounds="471.045049641927,566.187050393934,238.559016090568,37.6049953808212" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@110" Target="@88" Category="CodeSchema_Calls" Bounds="180.083181722227,567.403301932704,192.265201253034,35.0461570664603" Weight="1" />
+    <Link Source="@21" Target="@102" Category="CodeSchema_Calls" Bounds="366.228919556021,802.56928095775,190.1908461882,160.162735447886" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@105" Category="CodeSchema_Calls" Bounds="174.669008300114,855.336422121162,355.246437008966,107.395594284473" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@21" Target="@107" Category="CodeSchema_Calls" Bounds="342.10585018065,856.862413895799,204.958119337138,105.869602509837" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@21" Target="@61" Category="References" Bounds="426.416758171788,985.845359888297,62.160808824748,7.97881043948416" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@21" Target="@73" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@75" Category="CodeSchema_Calls" Bounds="406.237094336571,987.732016405636,91.6967898017218,15.6309636074459" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@77" Category="CodeSchema_Calls" Bounds="586.23940316637,207.839104595802,904.426623094418,754.892911809834" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@79" Category="CodeSchema_Calls" Bounds="320.457436968322,692.544264597481,239.715656149372,270.187751808155" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@21" Target="@84" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@85" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@87" Category="CodeSchema_Calls" Bounds="450.506531077721,127.04216777356,118.977172064365,835.689848632076" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@89" Category="CodeSchema_Calls" Bounds="169.062929187186,982.505792762527,318.427065745934,27.6480255715857" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@43" Target="@58" Category="Contains" FetchingParent="@43" />
+    <Link Source="@45" Target="@43" Category="CodeMap_ExternalReference" />
+    <Link Source="@45" Target="@47" Category="CodeMap_ExternalReference" />
+    <Link Source="@45" Target="@49" Category="Contains" FetchingParent="@45" />
+    <Link Source="@45" Target="@52" Category="Contains" FetchingParent="@45" />
+    <Link Source="@45" Target="@54" Category="Contains" FetchingParent="@45" />
+    <Link Source="@45" Target="@56" Category="Contains" FetchingParent="@45" />
+    <Link Source="@47" Target="@50" Category="Contains" FetchingParent="@47" />
+    <Link Source="@47" Target="@53" Category="Contains" FetchingParent="@47" />
+    <Link Source="@49" Target="@59" Category="Contains" FetchingParent="@49" />
+    <Link Source="@50" Target="@62" Category="Contains" FetchingParent="@50" />
+    <Link Source="@52" Target="@61" Category="Contains" FetchingParent="@52" />
+    <Link Source="@53" Target="@63" Category="Contains" FetchingParent="@53" />
+    <Link Source="@54" Target="@21" Category="Contains" FetchingParent="@54" />
+    <Link Source="@56" Target="@65" Category="Contains" FetchingParent="@56" />
+    <Link Source="@56" Target="@66" Category="Contains" FetchingParent="@56" />
+    <Link Source="@56" Target="@68" Category="Contains" FetchingParent="@56" />
+    <Link Source="@56" Target="@70" Category="Contains" FetchingParent="@56" />
+    <Link Source="@56" Target="@72" Category="Contains" FetchingParent="@56" />
+    <Link Source="@58" Target="@60" Category="Contains" FetchingParent="@58" />
+    <Link Source="@59" Target="@89" Category="Contains" FetchingParent="@59" />
+    <Link Source="@60" Target="@73" Category="Contains" FetchingParent="@60" />
+    <Link Source="@61" Target="@75" Category="Contains" FetchingParent="@61" />
+    <Link Source="@62" Target="@85" Category="Contains" FetchingParent="@62" />
+    <Link Source="@63" Target="@84" Category="Contains" FetchingParent="@63" />
+    <Link Source="@65" Target="(@44 @55 @64 Member=HostNameIdentifier)" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="(@44 @55 @64 Member=SharedAccessKeyIdentifier)" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="(@44 @55 @64 Member=SharedAccessKeyNameIdentifier)" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="@102" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="@105" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="@107" Category="Contains" FetchingParent="@65" />
+    <Link Source="@65" Target="@79" Category="Contains" FetchingParent="@65" />
+    <Link Source="@66" Target="@101" Category="Contains" FetchingParent="@66" />
+    <Link Source="@68" Target="@76" Category="Contains" FetchingParent="@68" />
+    <Link Source="@68" Target="@77" Category="Contains" FetchingParent="@68" />
+    <Link Source="@68" Target="@82" Category="Contains" FetchingParent="@68" />
+    <Link Source="@68" Target="@83" Category="Contains" FetchingParent="@68" />
+    <Link Source="@68" Target="@95" Category="Contains" FetchingParent="@68" />
+    <Link Source="@70" Target="(@44 @55 @69 Member=s_renewalTimeBufferPercentage)" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@100" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@104" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@66" Category="Implements" Bounds="743.868331578551,-81.6630819578607,60.4007212918004,29.9143776979629" Weight="1" />
+    <Link Source="@70" Target="@87" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@90" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@92" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@93" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@94" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@96" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@97" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@98" Category="Contains" FetchingParent="@70" />
+    <Link Source="@70" Target="@99" Category="Contains" FetchingParent="@70" />
+    <Link Source="@72" Target="@103" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@106" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@108" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@109" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@110" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@80" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@86" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@88" Category="Contains" FetchingParent="@72" />
+    <Link Source="@72" Target="@91" Category="Contains" FetchingParent="@72" />
+    <Link Source="@75" Target="@62" Category="References" Weight="1" />
+    <Link Source="@76" Target="@101" Category="CodeSchema_Calls" Weight="1" />
+    <Link Source="@76" Target="@95" Category="CodeSchema_FieldRead" Bounds="1231.634765625,-157.623672485352,86.839599609375,27.3008117675781" Weight="1" />
+    <Link Source="@77" Target="@66" Category="References" Weight="1" />
+    <Link Source="@77" Target="@95" Category="CodeSchema_FieldWrite" Bounds="1368.34741210938,-157.623672485352,0,21" Weight="1" />
+    <Link Source="@82" Target="@76" Category="CodeSchema_Calls" Bounds="1190.34741210938,-213.58366394043,0,21" Weight="1" />
+    <Link Source="@83" Target="@76" Category="CodeSchema_Calls" Bounds="1226.82592773438,-213.58366394043,57.223388671875,26.2476959228516" Weight="1" />
+    <Link Source="@87" Target="@92" Category="CodeSchema_FieldWrite" Bounds="184.504760742188,-269.543670654297,459.422729492188,94.4591217041016" Weight="1" />
+    <Link Source="@87" Target="@93" Category="CodeSchema_FieldWrite" Bounds="416.503356933594,-269.543670654297,244.316223144531,30.7797241210938" Weight="1" />
+    <Link Source="@87" Target="@94" Category="CodeSchema_FieldWrite" Bounds="261.280639648438,-269.543670654297,27.0453186035156,24.0231170654297" Weight="1" />
+    <Link Source="@87" Target="@96" Category="CodeSchema_FieldWrite" Bounds="325.438201904297,-269.543670654297,44.2056884765625,25.5025939941406" Weight="1" />
+    <Link Source="@87" Target="@97" Category="CodeSchema_FieldWrite" Bounds="364.406036376953,-269.543670654297,133.259948730469,28.1404724121094" Weight="1" />
+    <Link Source="@87" Target="@98" Category="CodeSchema_FieldWrite" Bounds="307.709869384766,-269.543670654297,499.479217529297,84.2944183349609" Weight="1" />
+    <Link Source="@88" Target="@80" Category="CodeSchema_Calls" Bounds="114.696691784361,627.348125802799,5.72615311966729E-06,21.0001000000005" Weight="1" />
+    <Link Source="@88" Target="@86" Category="CodeSchema_Calls" Bounds="142.06699601707,627.348125802799,55.2783023637475,26.2150030001347" Weight="1" />
+    <Link Source="@90" Target="@94" Category="CodeSchema_FieldWrite" Bounds="77.1125946044922,-269.543670654297,122.412689208984,32.3123321533203" Weight="1" />
+    <Link Source="@95" Target="@66" Category="References" Weight="1" />
+    <Link Source="_standardGraphExternalsGroup" Target="@43" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@47" Category="Contains" />
   </Links>
   <Categories>
+    <Category Id="CodeMap_ExternalReference" Label="External Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
     <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
     <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
@@ -141,7 +200,9 @@
     <Category Id="CodeSchema_Property" Label="Property" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Property" NavigationActionLabel="Properties" />
     <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
     <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Externals" Label="Externals" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Externals" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="FileSystem.Category.FileOfType.dll" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
     <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
     <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
   </Categories>
@@ -152,7 +213,9 @@
     <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsAbstract" Label="Is Abstract" Description="Flag to indicate member is 'Abstract' does not provide a full implementation" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExternal" Label="Is External" Description="Flag indicating whether this node is considered external" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsGeneric" Label="Is Generic" Description="Flag to indicate the member is 'Generic'" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsProtected" Label="Is Protected" Description="Flag to indicate the scope is Protected" DataType="System.Boolean" />
@@ -176,9 +239,12 @@
     <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
     <Property Id="IsContainment" DataType="System.Boolean" />
     <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="IsTargetVirtualized" Label="Link Target Virtualized" Description="If true, the link target end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
     <Property Id="Layout" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
     <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
     <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
     <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
@@ -191,6 +257,7 @@
     <Property Id="ZoomLevel" DataType="System.String" />
   </Properties>
   <QualifiedNames>
+    <Name Id="ArrayRank" Label="Array Rank" ValueType="System.String" />
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
     <Name Id="GenericArguments" Label="Generic Arguments" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" />
     <Name Id="GenericParameterCount" Label="Generic Parameter Count" ValueType="System.String" />
@@ -198,52 +265,83 @@
     <Name Id="Name" Label="Name" ValueType="System.String" />
     <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
     <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="ParameterIdentifier" Label="Parameter Identifier" ValueType="System.String" />
+    <Name Id="ParentType" Label="Parent Type" ValueType="System.Object" />
     <Name Id="Type" Label="Type" ValueType="System.Object" />
   </QualifiedNames>
   <IdentifierAliases>
-    <Alias n="1" Uri="Assembly=$(e33d09d9-d809-472c-82e6-6a26bdb86fc2.OutputPathUri)" />
-    <Alias n="2" Id="(@1)" />
-    <Alias n="3" Id="Namespace=Azure.Iot.Hub.Service.Authentication" />
-    <Alias n="4" Id="(@1 @3)" />
-    <Alias n="5" Id="Type=IotHubConnectionString" />
-    <Alias n="6" Id="(@1 @3 @5)" />
-    <Alias n="7" Id="(@1 @3 Type=ISasTokenProvider)" />
-    <Alias n="8" Id="Type=SasTokenAuthenticationPolicy" />
-    <Alias n="9" Id="(@1 @3 @8)" />
-    <Alias n="10" Id="Type=SasTokenProviderWithSharedAccessKey" />
-    <Alias n="11" Id="(@1 @3 @10)" />
-    <Alias n="12" Id="Type=SharedAccessSignatureBuilder" />
-    <Alias n="13" Id="(@1 @3 @12)" />
-    <Alias n="14" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/azure.core/1.2.2/lib/netstandard2.0/Azure.Core.dll" />
-    <Alias n="15" Id="(@1 @3 @8 Member=(Name=AddHeaders OverloadingParameters=[(@14 Namespace=Azure.Core Type=HttpMessage)]))" />
-    <Alias n="16" Id="(@1 @3 @8 Member=(Name=.ctor OverloadingParameters=[@7]))" />
-    <Alias n="17" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/netstandard.library/2.0.3/build/netstandard2.0/ref/netstandard.dll" />
-    <Alias n="18" Id="(@17 Namespace=System Type=String)" />
-    <Alias n="19" Id="(@1 @3 @12 Member=(Name=BuildExpiresOn OverloadingParameters=[(@17 Namespace=System Type=TimeSpan)]))" />
-    <Alias n="20" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/system.memory/4.5.3/lib/netstandard2.0/System.Memory.dll" />
-    <Alias n="21" Id="(@1 @3 @8 Member=(Name=Process OverloadingParameters=[(@14 Namespace=Azure.Core Type=HttpMessage),(@20 Namespace=System Type=(Name=ReadOnlyMemory GenericParameterCount=1 GenericArguments=[(@14 Namespace=Azure.Core.Pipeline Type=HttpPipelinePolicy)]))]))" />
-    <Alias n="22" Id="(@1 @3 @8 Member=(Name=ProcessAsync OverloadingParameters=[(@14 Namespace=Azure.Core Type=HttpMessage),(@20 Namespace=System Type=(Name=ReadOnlyMemory GenericParameterCount=1 GenericArguments=[(@14 Namespace=Azure.Core.Pipeline Type=HttpPipelinePolicy)]))]))" />
-    <Alias n="23" Id="(@1 @3 @12 Member=(Name=Sign OverloadingParameters=[@18,@18]))" />
-    <Alias n="24" Id="(@1 @3 @10 Member=(Name=.ctor OverloadingParameters=[@18,@18,(@14 Namespace=Azure Type=AzureKeyCredential),(@17 Namespace=System Type=TimeSpan)]))" />
-    <Alias n="25" Id="(@1 @3 @12 Member=(Name=BuildSignature OverloadingParameters=[@18,@18,@18,(@17 Namespace=System Type=TimeSpan)]))" />
-    <Alias n="26" Id="(@1 @3 @10 Member=.ctor)" />
-    <Alias n="27" Id="(@1 @3 @12 Member=.ctor)" />
-    <Alias n="28" Id="(@1 @3 @10 Member=_cachedSasToken)" />
-    <Alias n="29" Id="(@1 @3 @10 Member=_hostName)" />
-    <Alias n="30" Id="(@1 @3 @10 Member=_lock)" />
-    <Alias n="31" Id="(@1 @3 @8 Member=_sasTokenProvider)" />
-    <Alias n="32" Id="(@1 @3 @10 Member=_sharedAccessKey)" />
-    <Alias n="33" Id="(@1 @3 @10 Member=_sharedAccessPolicy)" />
-    <Alias n="34" Id="(@1 @3 @10 Member=_timeToLive)" />
-    <Alias n="35" Id="(@1 @3 @10 Member=_tokenExpiryTime)" />
-    <Alias n="36" Id="(@1 @3 @10 Member=Azure.Iot.Hub.Service.Authentication.ISasTokenProvider.GetSasToken)" />
-    <Alias n="37" Id="(@1 @3 Type=ISasTokenProvider Member=GetSasToken)" />
-    <Alias n="38" Id="(@1 @3 @12 Member=HostName)" />
-    <Alias n="39" Id="(@1 @3 @10 Member=IsTokenExpired)" />
-    <Alias n="40" Id="(@1 @3 @12 Member=SharedAccessKey)" />
-    <Alias n="41" Id="(@1 @3 @12 Member=SharedAccessPolicy)" />
-    <Alias n="42" Id="(@1 @3 @12 Member=TimeToLive)" />
-    <Alias n="43" Id="(@1 @3 @12 Member=ToSignature)" />
+    <Alias n="3" Id="Namespace=Azure.Iot.Hub.Service" />
+    <Alias n="20" Id="Type=IoTHubServiceClient" />
+    <Alias n="21" Id="(@44 @3 @20)" />
+    <Alias n="42" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/netstandard.library/2.0.3/build/netstandard2.0/ref/netstandard.dll" />
+    <Alias n="43" Id="(@42)" />
+    <Alias n="44" Uri="Assembly=$(e33d09d9-d809-472c-82e6-6a26bdb86fc2.OutputPathUri)" />
+    <Alias n="45" Id="(@44)" />
+    <Alias n="46" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/azure.core/1.2.2/lib/netstandard2.0/Azure.Core.dll" />
+    <Alias n="47" Id="(@46)" />
+    <Alias n="48" Id="Namespace=Azure.Core" />
+    <Alias n="49" Id="(@44 @48)" />
+    <Alias n="50" Id="(@46 @48)" />
+    <Alias n="51" Id="Namespace=Azure.Core.Pipeline" />
+    <Alias n="52" Id="(@44 @51)" />
+    <Alias n="53" Id="(@46 @51)" />
+    <Alias n="54" Id="(@44 @3)" />
+    <Alias n="55" Id="Namespace=Azure.Iot.Hub.Service.Authentication" />
+    <Alias n="56" Id="(@44 @55)" />
+    <Alias n="57" Id="Namespace=System" />
+    <Alias n="58" Id="(@42 @57)" />
+    <Alias n="59" Id="(@44 @48 Type=Argument)" />
+    <Alias n="60" Id="(@42 @57 Type=Array)" />
+    <Alias n="61" Id="(@44 @51 Type=ClientDiagnostics)" />
+    <Alias n="62" Id="(@46 @48 Type=ClientOptions)" />
+    <Alias n="63" Id="(@46 @51 Type=HttpPipelineBuilder)" />
+    <Alias n="64" Id="Type=IotHubConnectionString" />
+    <Alias n="65" Id="(@44 @55 @64)" />
+    <Alias n="66" Id="(@44 @55 Type=ISasTokenProvider)" />
+    <Alias n="67" Id="Type=SasTokenAuthenticationPolicy" />
+    <Alias n="68" Id="(@44 @55 @67)" />
+    <Alias n="69" Id="Type=SasTokenProviderWithSharedAccessKey" />
+    <Alias n="70" Id="(@44 @55 @69)" />
+    <Alias n="71" Id="Type=SharedAccessSignatureBuilder" />
+    <Alias n="72" Id="(@44 @55 @71)" />
+    <Alias n="73" Id="(@42 @57 Type=Array Member=(Name=Empty GenericParameterCount=1))" />
+    <Alias n="74" Id="Name=.ctor" />
+    <Alias n="75" Id="(@44 @51 Type=ClientDiagnostics Member=(@74 OverloadingParameters=[@62]))" />
+    <Alias n="76" Id="(@44 @55 @67 Member=(Name=AddHeaders OverloadingParameters=[(@46 @48 Type=HttpMessage)]))" />
+    <Alias n="77" Id="(@44 @55 @67 Member=(@74 OverloadingParameters=[@66]))" />
+    <Alias n="78" Id="(@42 @57 Type=String)" />
+    <Alias n="79" Id="(@44 @55 @64 Member=(@74 OverloadingParameters=[@78]))" />
+    <Alias n="80" Id="(@44 @55 @71 Member=(Name=BuildExpiresOn OverloadingParameters=[(@42 @57 Type=TimeSpan)]))" />
+    <Alias n="81" Uri="Assembly=file:///C:/Users/abmisr/.nuget/packages/system.memory/4.5.3/lib/netstandard2.0/System.Memory.dll" />
+    <Alias n="82" Id="(@44 @55 @67 Member=(Name=Process OverloadingParameters=[(@46 @48 Type=HttpMessage),(@81 @57 Type=(Name=ReadOnlyMemory GenericParameterCount=1 GenericArguments=[(@46 @51 Type=HttpPipelinePolicy)]))]))" />
+    <Alias n="83" Id="(@44 @55 @67 Member=(Name=ProcessAsync OverloadingParameters=[(@46 @48 Type=HttpMessage),(@81 @57 Type=(Name=ReadOnlyMemory GenericParameterCount=1 GenericArguments=[(@46 @51 Type=HttpPipelinePolicy)]))]))" />
+    <Alias n="84" Id="(@46 @51 Type=HttpPipelineBuilder Member=(Name=Build OverloadingParameters=[@62,(@46 @51 Type=(Name=HttpPipelinePolicy ArrayRank=1 ParentType=HttpPipelinePolicy))]))" />
+    <Alias n="85" Id="(@46 @48 Type=ClientOptions Member=(Name=AddPolicy OverloadingParameters=[(@46 @51 Type=HttpPipelinePolicy),(@46 @48 Type=HttpPipelinePosition)]))" />
+    <Alias n="86" Id="(@44 @55 @71 Member=(Name=Sign OverloadingParameters=[@78,@78]))" />
+    <Alias n="87" Id="(@44 @55 @69 Member=(@74 OverloadingParameters=[@78,@78,(@46 Namespace=Azure Type=AzureKeyCredential),(@42 @57 Type=TimeSpan)]))" />
+    <Alias n="88" Id="(@44 @55 @71 Member=(Name=BuildSignature OverloadingParameters=[@78,@78,@78,(@42 @57 Type=TimeSpan)]))" />
+    <Alias n="89" Id="(@44 @48 Type=Argument Member=(Name=AssertNotNull GenericParameterCount=1 OverloadingParameters=[(ParameterIdentifier=0),@78]))" />
+    <Alias n="90" Id="(@44 @55 @69 Member=.ctor)" />
+    <Alias n="91" Id="(@44 @55 @71 Member=.ctor)" />
+    <Alias n="92" Id="(@44 @55 @69 Member=_cachedSasToken)" />
+    <Alias n="93" Id="(@44 @55 @69 Member=_hostName)" />
+    <Alias n="94" Id="(@44 @55 @69 Member=_lock)" />
+    <Alias n="95" Id="(@44 @55 @67 Member=_sasTokenProvider)" />
+    <Alias n="96" Id="(@44 @55 @69 Member=_sharedAccessKey)" />
+    <Alias n="97" Id="(@44 @55 @69 Member=_sharedAccessPolicy)" />
+    <Alias n="98" Id="(@44 @55 @69 Member=_timeToLive)" />
+    <Alias n="99" Id="(@44 @55 @69 Member=_tokenExpiryTime)" />
+    <Alias n="100" Id="(@44 @55 @69 Member=Azure.Iot.Hub.Service.Authentication.ISasTokenProvider.GetSasToken)" />
+    <Alias n="101" Id="(@44 @55 Type=ISasTokenProvider Member=GetSasToken)" />
+    <Alias n="102" Id="(@44 @55 @64 Member=HostName)" />
+    <Alias n="103" Id="(@44 @55 @71 Member=HostName)" />
+    <Alias n="104" Id="(@44 @55 @69 Member=IsTokenExpired)" />
+    <Alias n="105" Id="(@44 @55 @64 Member=SharedAccessKey)" />
+    <Alias n="106" Id="(@44 @55 @71 Member=SharedAccessKey)" />
+    <Alias n="107" Id="(@44 @55 @64 Member=SharedAccessPolicy)" />
+    <Alias n="108" Id="(@44 @55 @71 Member=SharedAccessPolicy)" />
+    <Alias n="109" Id="(@44 @55 @71 Member=TimeToLive)" />
+    <Alias n="110" Id="(@44 @55 @71 Member=ToSignature)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
