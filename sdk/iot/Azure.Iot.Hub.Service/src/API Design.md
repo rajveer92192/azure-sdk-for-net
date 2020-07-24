@@ -33,31 +33,30 @@ The client can now be initialized using:
 Option 1:
 
 ```csharp
-var client = new IoTHubServiceClient(connectionString);
+var endpoint = new Uri("http:<hub_hostname>.azure-devices.net");
+var credential = new IotHubSasCredential("shared_access_policy", "shared_access_key", TimeSpan.FromMinutes(5)); // TimeSpan.FromMinutes(5) is the sas token time to live.
+
+var client = new IotHubServiceClient(endpoint, credential);
 ```
 
 Option 2:
 
 ```csharp
-var endpoint = new Uri("http:<hub_hostname>.azure-devices.net");
-var credential = new IotHubSasCredential("shared_access_policy", "shared_access_key");
-credential.SasTokenTimeToLive = TimeSpan.FromMinutes(5);
-
-var client = new IoTHubServiceClient(endpoint, credential);
+var client = new IotHubServiceClient(connectionString);
 ```
 
 ```csharp
 /// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
 /// </summary>
 /// <param name="connectionString">
 /// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
 /// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
 /// </param>
-public IoTHubServiceClient(string connectionString) {}
+public IotHubServiceClient(string connectionString) {}
 
 /// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
 /// </summary>
 /// <param name="connectionString">
 /// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
@@ -66,10 +65,10 @@ public IoTHubServiceClient(string connectionString) {}
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions options) {}
+public IotHubServiceClient(string connectionString, IotHubServiceClientOptions options) {}
 
 /// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
 /// </summary>
 /// <param name="endpoint">
 /// The IoT Hub service instance endpoint to connect to.
@@ -80,12 +79,12 @@ public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions o
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options = default) {}
+public IotHubServiceClient(Uri endpoint, IotHubSasCredential credential, IotHubServiceClientOptions options = default) {}
 
 // TODO: Will be added once service implement's OAuth support
 
 /// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
 /// </summary>
 /// <param name="endpoint">
 /// The IoT Hub service instance endpoint to connect to.
@@ -96,7 +95,7 @@ public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubS
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options = default) {}
+public IotHubServiceClient(Uri endpoint, TokenCredential credential, IotHubServiceClientOptions options = default) {}
 
 ```
 

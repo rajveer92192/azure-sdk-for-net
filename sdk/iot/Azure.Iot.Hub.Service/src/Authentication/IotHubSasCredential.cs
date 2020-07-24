@@ -35,10 +35,19 @@ namespace Azure.Iot.Hub.Service.Authentication
         /// <param name="sharedAccessKey">
         /// The IoT Hub shared access key associated with the shared access policy permissions.
         /// </param>
-        public IotHubSasCredential(string sharedAccessPolicy, string sharedAccessKey)
+        /// <param name="timeToLive">
+        /// The validity duration of the generated shared access signature token used for authentication.
+        /// The token will be renewed when at 15% or less of it's lifespan. The default value is 30 minutes.
+        /// </param>
+        public IotHubSasCredential(string sharedAccessPolicy, string sharedAccessKey, TimeSpan? timeToLive = default)
         {
             SharedAccessPolicy = sharedAccessPolicy;
             SharedAccessKey = sharedAccessKey;
+
+            if (timeToLive != null)
+            {
+                SasTokenTimeToLive = (TimeSpan)timeToLive;
+            }
         }
 
         /// <summary>
@@ -61,7 +70,7 @@ namespace Azure.Iot.Hub.Service.Authentication
         /// The validity duration of the generated shared access signature token used for authentication.
         /// The token will be renewed when at 15% or less of it's lifespan. The default value is 30 minutes.
         /// </summary>
-        public TimeSpan SasTokenTimeToLive { get; set; } = TimeSpan.FromMinutes(30);
+        public TimeSpan SasTokenTimeToLive { get; } = TimeSpan.FromMinutes(30);
 
         private static Uri BuildEndpointUriFromHostName(string hostName)
         {
