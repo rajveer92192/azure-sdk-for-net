@@ -30,20 +30,20 @@ namespace Azure.Iot.Hub.Service.Authentication
         {
         }
 
-        internal SasTokenProviderWithSharedAccessKey(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey, TimeSpan timeToLive)
+        internal SasTokenProviderWithSharedAccessKey(Uri endpoint, string sharedAccessPolicy, string sharedAccessKey, TimeSpan timeToLive)
         {
-            Argument.AssertNotNullOrWhiteSpace(hostName, nameof(hostName));
+            Argument.AssertNotNull(endpoint, nameof(endpoint));
             Argument.AssertNotNullOrWhiteSpace(sharedAccessPolicy, nameof(sharedAccessPolicy));
-            Argument.AssertNotNullOrWhiteSpace(sharedAccessKey.Key, nameof(sharedAccessKey));
+            Argument.AssertNotNullOrWhiteSpace(sharedAccessKey, nameof(sharedAccessKey));
 
             if (timeToLive.CompareTo(TimeSpan.Zero) < 0)
             {
                 throw new ArgumentException("The value for SasTokenTimeToLive cannot be a negative TimeSpan", nameof(timeToLive));
             }
 
-            _hostName = hostName;
+            _hostName = endpoint.Host;
             _sharedAccessPolicy = sharedAccessPolicy;
-            _sharedAccessKey = sharedAccessKey.Key;
+            _sharedAccessKey = sharedAccessKey;
             _timeToLive = timeToLive;
 
             _cachedSasToken = null;

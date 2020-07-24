@@ -15,7 +15,6 @@ namespace Azure.Iot.Hub.Service
     {
         private readonly HttpPipeline _httpPipeline;
         private readonly ClientDiagnostics _clientDiagnostics;
-        private readonly Uri _endpoint;
         private readonly RegistryManagerRestClient _registryManagerRestClient;
         private readonly TwinRestClient _twinRestClient;
         private readonly DeviceMethodRestClient _deviceMethodRestClient;
@@ -84,23 +83,21 @@ namespace Azure.Iot.Hub.Service
         {
             Argument.AssertNotNull(options, nameof(options));
 
-            var iotHubConnectionString = new IotHubConnectionString(connectionString);
+            var credential = new IotHubSasCredential(connectionString);
             var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
-                iotHubConnectionString.HostName,
-                iotHubConnectionString.SharedAccessPolicy,
-                iotHubConnectionString.SharedAccessKey,
-                options.SasTokenTimeToLive);
-
-            _endpoint = BuildEndpointUriFromHostName(iotHubConnectionString.HostName);
+                credential.Endpoint,
+                credential.SharedAccessPolicy,
+                credential.SharedAccessKey,
+                credential.SasTokenTimeToLive);
 
             _clientDiagnostics = new ClientDiagnostics(options);
 
             options.AddPolicy(new SasTokenAuthenticationPolicy(sasTokenProvider), HttpPipelinePosition.PerCall);
             _httpPipeline = HttpPipelineBuilder.Build(options);
 
-            _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, _endpoint, options.GetVersionString());
+            _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, credential.Endpoint, options.GetVersionString());
             _twinRestClient = new TwinRestClient(_clientDiagnostics, _httpPipeline, null, options.GetVersionString());
-            _deviceMethodRestClient = new DeviceMethodRestClient(_clientDiagnostics, _httpPipeline, _endpoint, options.GetVersionString());
+            _deviceMethodRestClient = new DeviceMethodRestClient(_clientDiagnostics, _httpPipeline, credential.Endpoint, options.GetVersionString());
 
             Devices = new DevicesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
             Modules = new ModulesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
@@ -114,57 +111,47 @@ namespace Azure.Iot.Hub.Service
         /// <summary>
         /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
         /// </summary>
-        /// <param name="hostName">
-        /// The IoT Hub service instance host to connect to.
+        /// <param name="endpoint">
+        /// The IoT Hub service instance endpoint to connect to.
         /// </param>
-        /// <param name="sharedAccessPolicy">
-        /// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
-        /// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+        /// <param name="credential">
+        /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
         /// </param>
-        /// <param name="sharedAccessKey">
-        /// The IoT Hub shared access key associated with the shared access policy permissions."/>
-        /// </param>
-        public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey)
-            : this(hostName, sharedAccessPolicy, sharedAccessKey, new IoTHubServiceClientOptions())
+        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential)
+            : this(endpoint, credential, new IoTHubServiceClientOptions())
         {
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
         /// </summary>
-        /// <param name="hostName">
-        /// The IoT Hub service instance host to connect to.
+        /// <param name="endpoint">
+        /// The IoT Hub service instance endpoint to connect to.
         /// </param>
-        /// <param name="sharedAccessPolicy">
-        /// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
-        /// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
-        /// </param>
-        /// <param name="sharedAccessKey">
-        /// The IoT Hub shared access key associated with the shared access policy permissions."/>
+        /// <param name="credential">
+        /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
         /// </param>
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
-        public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey, IoTHubServiceClientOptions options)
+        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options)
         {
             Argument.AssertNotNull(options, nameof(options));
 
             var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
-                hostName,
-                sharedAccessPolicy,
-                sharedAccessKey,
-                options.SasTokenTimeToLive);
-
-            _endpoint = BuildEndpointUriFromHostName(hostName);
+                endpoint,
+                credential.SharedAccessPolicy,
+                credential.SharedAccessKey,
+                credential.SasTokenTimeToLive);
 
             _clientDiagnostics = new ClientDiagnostics(options);
 
             options.AddPolicy(new SasTokenAuthenticationPolicy(sasTokenProvider), HttpPipelinePosition.PerCall);
             _httpPipeline = HttpPipelineBuilder.Build(options);
 
-            _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, _endpoint, options.GetVersionString());
+            _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
             _twinRestClient = new TwinRestClient(_clientDiagnostics, _httpPipeline, null, options.GetVersionString());
-            _deviceMethodRestClient = new DeviceMethodRestClient(_clientDiagnostics, _httpPipeline, _endpoint, options.GetVersionString());
+            _deviceMethodRestClient = new DeviceMethodRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
 
             Devices = new DevicesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
             Modules = new ModulesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
@@ -173,11 +160,6 @@ namespace Azure.Iot.Hub.Service
             Messages = new CloudToDeviceMessagesClient();
             Files = new FilesClient();
             Jobs = new JobsClient();
-        }
-
-        private static Uri BuildEndpointUriFromHostName(string hostName)
-        {
-            return new UriBuilder { Scheme = "https", Host = hostName }.Uri;
         }
     }
 }

@@ -44,36 +44,55 @@ public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions o
 /// <summary>
 /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
 /// </summary>
-/// <param name="hostName">
-/// The IoT Hub service instance host to connect to.
+/// <param name="endpoint">
+/// The IoT Hub service instance endpoint to connect to.
 /// </param>
-/// <param name="sharedAccessPolicy">
-/// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
-/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
+/// <param name="credential">
+/// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
 /// </param>
-/// <param name="sharedAccessKey">
-/// The IoT Hub shared access key associated with the shared access policy permissions."/>
-/// </param>
-public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey) {}
+public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential) {}
 
 /// <summary>
 /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
 /// </summary>
-/// <param name="hostName">
-/// param name="hostName">
-/// The IoT Hub service instance host to connect to.
+/// <param name="endpoint">
+/// The IoT Hub service instance endpoint to connect to.
 /// </param>
-/// <param name="sharedAccessPolicy">
-/// The IoT Hub access permission, which can be either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
-/// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
-/// </param>
-/// <param name="sharedAccessKey">
-/// The IoT Hub shared access key associated with the shared access policy permissions."/>
+/// <param name="credential">
+/// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
 /// </param>
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(string hostName, string sharedAccessPolicy, AzureKeyCredential sharedAccessKey, IoTHubServiceClientOptions options) {}
+public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options) {}
+
+// TODO: Will be added once service implement's OAuth support
+
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="endpoint">
+/// The IoT Hub service instance endpoint to connect to.
+/// </param>
+/// <param name="credential">
+/// The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.
+///</param>
+public IoTHubServiceClient(Uri endpoint, TokenCredential credential) {}
+
+/// <summary>
+/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+/// </summary>
+/// <param name="endpoint">
+/// The IoT Hub service instance endpoint to connect to.
+/// </param>
+/// <param name="credential">
+/// The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.
+///</param>
+/// <param name="options">
+/// Options that allow configuration of requests sent to the IoT Hub service.
+/// </param>
+public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options) {}
+
 ```
 
 </details>
