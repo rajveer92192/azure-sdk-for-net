@@ -19,6 +19,30 @@ Desired - PnpDesired
 
 <details><summary><b>Constructors</b></summary>
 
+
+Usage:
+
+We start off with a string connection string, that we can copy from Azure portal.
+
+```csharp
+string connectionString = "HostName=<hub_hostname>.azure-devices.net;SharedAccessKeyName=<shared_access_policy>;SharedAccessKey=<shared_access_key>";
+```
+
+The client can now be initialized using:
+Option 1:
+
+```csharp
+var client = new IoTHubServiceClient(connectionString);
+```
+
+Option 2:
+
+```csharp
+var endpoint = new Uri("http:<hub_hostname>.azure-devices.net");
+var credential = new IotHubSasCredential("shared_access_policy", "shared_access_key");
+var client = new IoTHubServiceClient(endpoint, credential);
+```
+
 ```csharp
 /// <summary>
 /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
