@@ -29,6 +29,7 @@ string connectionString = "HostName=<hub_hostname>.azure-devices.net;SharedAcces
 ```
 
 The client can now be initialized using:
+
 Option 1:
 
 ```csharp
@@ -40,6 +41,8 @@ Option 2:
 ```csharp
 var endpoint = new Uri("http:<hub_hostname>.azure-devices.net");
 var credential = new IotHubSasCredential("shared_access_policy", "shared_access_key");
+credential.SasTokenTimeToLive = TimeSpan.FromMinutes(5);
+
 var client = new IoTHubServiceClient(endpoint, credential);
 ```
 
@@ -74,21 +77,10 @@ public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions o
 /// <param name="credential">
 /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
 /// </param>
-public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential) {}
-
-/// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
-/// </summary>
-/// <param name="endpoint">
-/// The IoT Hub service instance endpoint to connect to.
-/// </param>
-/// <param name="credential">
-/// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
-/// </param>
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options) {}
+public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options = default) {}
 
 // TODO: Will be added once service implement's OAuth support
 
@@ -101,21 +93,10 @@ public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubS
 /// <param name="credential">
 /// The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.
 ///</param>
-public IoTHubServiceClient(Uri endpoint, TokenCredential credential) {}
-
-/// <summary>
-/// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
-/// </summary>
-/// <param name="endpoint">
-/// The IoT Hub service instance endpoint to connect to.
-/// </param>
-/// <param name="credential">
-/// The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.
-///</param>
 /// <param name="options">
 /// Options that allow configuration of requests sent to the IoT Hub service.
 /// </param>
-public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options) {}
+public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options = default) {}
 
 ```
 

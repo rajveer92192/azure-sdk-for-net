@@ -117,26 +117,12 @@ namespace Azure.Iot.Hub.Service
         /// <param name="credential">
         /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
         /// </param>
-        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential)
-            : this(endpoint, credential, new IoTHubServiceClientOptions())
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
-        /// </summary>
-        /// <param name="endpoint">
-        /// The IoT Hub service instance endpoint to connect to.
-        /// </param>
-        /// <param name="credential">
-        /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
-        /// </param>
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
-        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options)
+        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options = default)
         {
-            Argument.AssertNotNull(options, nameof(options));
+            options ??= new IoTHubServiceClientOptions();
 
             var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
                 endpoint,
@@ -147,6 +133,41 @@ namespace Azure.Iot.Hub.Service
             _clientDiagnostics = new ClientDiagnostics(options);
 
             options.AddPolicy(new SasTokenAuthenticationPolicy(sasTokenProvider), HttpPipelinePosition.PerCall);
+            _httpPipeline = HttpPipelineBuilder.Build(options);
+
+            _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
+            _twinRestClient = new TwinRestClient(_clientDiagnostics, _httpPipeline, null, options.GetVersionString());
+            _deviceMethodRestClient = new DeviceMethodRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
+
+            Devices = new DevicesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
+            Modules = new ModulesClient(_registryManagerRestClient, _twinRestClient, _deviceMethodRestClient);
+
+            Statistics = new StatisticsClient();
+            Messages = new CloudToDeviceMessagesClient();
+            Files = new FilesClient();
+            Jobs = new JobsClient();
+        }
+
+        // TODO: Will be enabled once service starts supporting OAuth tokens, for authentication - added here only for reference
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// </summary>
+        /// <param name="endpoint">
+        /// The IoT Hub service instance endpoint to connect to.
+        /// </param>
+        /// <param name="credential">
+        /// The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.
+        /// </param>
+        /// <param name="options">
+        /// Options that allow configuration of requests sent to the IoT Hub service.
+        /// </param>
+        public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options = default)
+        {
+            options ??= new IoTHubServiceClientOptions();
+
+            _clientDiagnostics = new ClientDiagnostics(options);
+
+            options.AddPolicy(new BearerTokenAuthenticationPolicy(credential, "token_credential_scope_here"), HttpPipelinePosition.PerCall);
             _httpPipeline = HttpPipelineBuilder.Build(options);
 
             _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
