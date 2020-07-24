@@ -11,7 +11,7 @@ namespace Azure.Iot.Hub.Service
     /// <summary>
     /// The IoT Hub Service Client.
     /// </summary>
-    public class IoTHubServiceClient
+    public class IotHubServiceClient
     {
         private readonly HttpPipeline _httpPipeline;
         private readonly ClientDiagnostics _clientDiagnostics;
@@ -50,27 +50,27 @@ namespace Azure.Iot.Hub.Service
         public virtual JobsClient Jobs { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
         /// </summary>
-        protected IoTHubServiceClient()
+        protected IotHubServiceClient()
         {
             // This constructor only exists for mocking purposes in unit tests. It should not be used otherwise.
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
         /// </summary>
         /// <param name="connectionString">
         /// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
         /// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
         /// </param>
-        public IoTHubServiceClient(string connectionString)
-            : this(connectionString, new IoTHubServiceClientOptions())
+        public IotHubServiceClient(string connectionString)
+            : this(connectionString, new IotHubServiceClientOptions())
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
         /// </summary>
         /// <param name="connectionString">
         /// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
@@ -79,7 +79,7 @@ namespace Azure.Iot.Hub.Service
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
-        public IoTHubServiceClient(string connectionString, IoTHubServiceClientOptions options)
+        public IotHubServiceClient(string connectionString, IotHubServiceClientOptions options)
         {
             Argument.AssertNotNull(options, nameof(options));
 
@@ -109,7 +109,7 @@ namespace Azure.Iot.Hub.Service
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
         /// </summary>
         /// <param name="endpoint">
         /// The IoT Hub service instance endpoint to connect to.
@@ -120,9 +120,9 @@ namespace Azure.Iot.Hub.Service
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
-        public IoTHubServiceClient(Uri endpoint, IotHubSasCredential credential, IoTHubServiceClientOptions options = default)
+        public IotHubServiceClient(Uri endpoint, IotHubSasCredential credential, IotHubServiceClientOptions options = default)
         {
-            options ??= new IoTHubServiceClientOptions();
+            options ??= new IotHubServiceClientOptions();
 
             var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
                 endpoint,
@@ -150,7 +150,7 @@ namespace Azure.Iot.Hub.Service
 
         // TODO: Will be enabled once service starts supporting OAuth tokens, for authentication - added here only for reference
         /// <summary>
-        /// Initializes a new instance of the <see cref="IoTHubServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="IotHubServiceClient"/> class.
         /// </summary>
         /// <param name="endpoint">
         /// The IoT Hub service instance endpoint to connect to.
@@ -161,9 +161,9 @@ namespace Azure.Iot.Hub.Service
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
-        public IoTHubServiceClient(Uri endpoint, TokenCredential credential, IoTHubServiceClientOptions options = default)
+        public IotHubServiceClient(Uri endpoint, TokenCredential credential, IotHubServiceClientOptions options = default)
         {
-            options ??= new IoTHubServiceClientOptions();
+            options ??= new IotHubServiceClientOptions();
 
             _clientDiagnostics = new ClientDiagnostics(options);
 

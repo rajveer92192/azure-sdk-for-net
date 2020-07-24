@@ -26,7 +26,7 @@ namespace Azure.Iot.Hub.Service.Tests
 
             DeviceIdentity device = null;
 
-            IoTHubServiceClient client = GetClient();
+            IotHubServiceClient client = GetClient();
             try
             {
                 try
