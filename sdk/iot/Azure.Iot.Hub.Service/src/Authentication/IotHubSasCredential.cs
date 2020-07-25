@@ -9,20 +9,27 @@ namespace Azure.Iot.Hub.Service.Authentication
     /// <summary>
     /// The IoT Hub credentials, to be used for authenticating against an IoT Hub instance via SAS tokens.
     /// </summary>
-    public class IotHubSasCredential
+    public class IotHubSasCredential : ISasTokenProvider
     {
-        private const string HostNameIdentifier = "HostName";
-        private const string SharedAccessKeyIdentifier = "SharedAccessKey";
-        private const string SharedAccessKeyNameIdentifier = "SharedAccessKeyName";
+        // Time buffer before expiry when the token should be renewed, expressed as a percentage of the time to live.
+        // The token will be renewed when it has 15% or less of the sas token's lifespan left.
+        private const int RenewalTimeBufferPercentage = 15;
+
+        private readonly object _lock = new object();
+
+        private string _cachedSasToken;
+        private DateTimeOffset _tokenExpiryTime;
 
         internal IotHubSasCredential(string connectionString)
         {
             var iotHubConnectionString = ConnectionString.Parse(connectionString);
 
-            SharedAccessPolicy = iotHubConnectionString.GetRequired(SharedAccessKeyNameIdentifier);
-            SharedAccessKey = iotHubConnectionString.GetRequired(SharedAccessKeyIdentifier);
+            SharedAccessPolicy = iotHubConnectionString.GetRequired(SharedAccessSignatureConstants.SharedAccessPolicyIdentifier);
+            SharedAccessKey = iotHubConnectionString.GetRequired(SharedAccessSignatureConstants.SharedAccessKeyIdentifier);
 
-            Endpoint = BuildEndpointUriFromHostName(iotHubConnectionString.GetRequired(HostNameIdentifier));
+            Endpoint = BuildEndpointUriFromHostName(iotHubConnectionString.GetRequired(SharedAccessSignatureConstants.HostNameIdentifier));
+
+            _cachedSasToken = null;
         }
 
         /// <summary>
@@ -39,15 +46,22 @@ namespace Azure.Iot.Hub.Service.Authentication
         /// The validity duration of the generated shared access signature token used for authentication.
         /// The token will be renewed when at 15% or less of it's lifespan. The default value is 30 minutes.
         /// </param>
-        public IotHubSasCredential(string sharedAccessPolicy, string sharedAccessKey, TimeSpan? timeToLive = default)
+        public IotHubSasCredential(string sharedAccessPolicy, string sharedAccessKey, TimeSpan timeToLive = default)
         {
             SharedAccessPolicy = sharedAccessPolicy;
             SharedAccessKey = sharedAccessKey;
 
             if (timeToLive != null)
             {
-                SasTokenTimeToLive = (TimeSpan)timeToLive;
+                if (timeToLive.CompareTo(TimeSpan.Zero) < 0)
+                {
+                    throw new ArgumentException("The value for SasTokenTimeToLive cannot be a negative TimeSpan", nameof(timeToLive));
+                }
+
+                SasTokenTimeToLive = timeToLive;
             }
+
+            _cachedSasToken = null;
         }
 
         /// <summary>
@@ -79,6 +93,42 @@ namespace Azure.Iot.Hub.Service.Authentication
                 Scheme = Uri.UriSchemeHttps,
                 Host = hostName
             }.Uri;
+        }
+
+        string ISasTokenProvider.GetSasToken()
+        {
+            lock (_lock)
+            {
+                if (TokenShouldBeGenerated())
+                {
+                    var builder = new SharedAccessSignatureBuilder
+                    {
+                        HostName = Endpoint.Host,
+                        SharedAccessPolicy = SharedAccessPolicy,
+                        SharedAccessKey = SharedAccessKey,
+                        TimeToLive = SasTokenTimeToLive,
+                    };
+
+                    _tokenExpiryTime = DateTimeOffset.UtcNow.Add(SasTokenTimeToLive);
+                    _cachedSasToken = builder.ToSignature();
+                }
+
+                return _cachedSasToken;
+            }
+        }
+
+        private bool TokenShouldBeGenerated()
+        {
+            // The token needs to be generated if this is the first time it is being accessed (not cached yet)
+            // or the current time is greater than or equal to the token expiry time, less 15% buffer.
+            if (_cachedSasToken == null)
+            {
+                return true;
+            }
+
+            var bufferTimeInMilliseconds = (double)RenewalTimeBufferPercentage / 100 * SasTokenTimeToLive.TotalMilliseconds;
+            DateTimeOffset tokenExpiryTimeWithBuffer = _tokenExpiryTime.AddMilliseconds(-bufferTimeInMilliseconds);
+            return DateTimeOffset.UtcNow.CompareTo(tokenExpiryTimeWithBuffer) >= 0;
         }
     }
 }

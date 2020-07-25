@@ -64,6 +64,12 @@ namespace Azure.Iot.Hub.Service
         /// The IoT Hub connection string, with either "iothubowner", "service", "registryRead" or "registryReadWrite" policy, as applicable.
         /// For more information, see <see href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security#access-control-and-permissions"/>.
         /// </param>
+        /// <seealso cref="IotHubServiceClient(Uri, IotHubSasCredential, IotHubServiceClientOptions)">
+        /// This other constructor provides an opportunity to override default behavior, including setting the sas token time to live, specifying the service API version,
+        /// overriding <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Pipeline.md">transport</see>,
+        /// enabling <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Diagnostics.md">diagnostics</see>,
+        /// and controlling <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Configuration.md">retry strategy</see>.
+        /// </seealso>
         public IotHubServiceClient(string connectionString)
             : this(connectionString, new IotHubServiceClientOptions())
         {
@@ -79,20 +85,18 @@ namespace Azure.Iot.Hub.Service
         /// <param name="options">
         /// Options that allow configuration of requests sent to the IoT Hub service.
         /// </param>
+        /// <seealso cref="IotHubServiceClient(Uri, IotHubSasCredential, IotHubServiceClientOptions)">
+        /// This other constructor provides an opportunity to override default behavior, including setting the sas token time to live, specifying the service API version,
+        /// overriding <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Pipeline.md">transport</see>,
+        /// enabling <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Diagnostics.md">diagnostics</see>,
+        /// and controlling <see href="https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/core/Azure.Core/samples/Configuration.md">retry strategy</see>.
+        /// </seealso>
         public IotHubServiceClient(string connectionString, IotHubServiceClientOptions options)
         {
-            Argument.AssertNotNull(options, nameof(options));
-
-            var credential = new IotHubSasCredential(connectionString);
-            var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
-                credential.Endpoint,
-                credential.SharedAccessPolicy,
-                credential.SharedAccessKey,
-                credential.SasTokenTimeToLive);
-
             _clientDiagnostics = new ClientDiagnostics(options);
 
-            options.AddPolicy(new SasTokenAuthenticationPolicy(sasTokenProvider), HttpPipelinePosition.PerCall);
+            var credential = new IotHubSasCredential(connectionString);
+            options.AddPolicy(new SasTokenAuthenticationPolicy(credential), HttpPipelinePosition.PerCall);
             _httpPipeline = HttpPipelineBuilder.Build(options);
 
             _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, credential.Endpoint, options.GetVersionString());
@@ -123,16 +127,9 @@ namespace Azure.Iot.Hub.Service
         public IotHubServiceClient(Uri endpoint, IotHubSasCredential credential, IotHubServiceClientOptions options = default)
         {
             options ??= new IotHubServiceClientOptions();
-
-            var sasTokenProvider = new SasTokenProviderWithSharedAccessKey(
-                endpoint,
-                credential.SharedAccessPolicy,
-                credential.SharedAccessKey,
-                credential.SasTokenTimeToLive);
-
             _clientDiagnostics = new ClientDiagnostics(options);
 
-            options.AddPolicy(new SasTokenAuthenticationPolicy(sasTokenProvider), HttpPipelinePosition.PerCall);
+            options.AddPolicy(new SasTokenAuthenticationPolicy(credential), HttpPipelinePosition.PerCall);
             _httpPipeline = HttpPipelineBuilder.Build(options);
 
             _registryManagerRestClient = new RegistryManagerRestClient(_clientDiagnostics, _httpPipeline, endpoint, options.GetVersionString());
@@ -164,7 +161,6 @@ namespace Azure.Iot.Hub.Service
         public IotHubServiceClient(Uri endpoint, TokenCredential credential, IotHubServiceClientOptions options = default)
         {
             options ??= new IotHubServiceClientOptions();
-
             _clientDiagnostics = new ClientDiagnostics(options);
 
             options.AddPolicy(new BearerTokenAuthenticationPolicy(credential, "token_credential_scope_here"), HttpPipelinePosition.PerCall);
