@@ -46,13 +46,12 @@ namespace Azure.Iot.Hub.Service
         UnconditionalIfMatch = 0,
         IfMatch = 1,
     }
-    public partial class IoTHubServiceClient
+    public partial class IotHubServiceClient
     {
-        protected IoTHubServiceClient() { }
-        public IoTHubServiceClient(string connectionString) { }
-        public IoTHubServiceClient(string connectionString, Azure.Iot.Hub.Service.IoTHubServiceClientOptions options) { }
-        public IoTHubServiceClient(System.Uri endpoint, Azure.Core.TokenCredential credential) { }
-        public IoTHubServiceClient(System.Uri endpoint, Azure.Core.TokenCredential credential, Azure.Iot.Hub.Service.IoTHubServiceClientOptions options) { }
+        protected IotHubServiceClient() { }
+        public IotHubServiceClient(string connectionString) { }
+        public IotHubServiceClient(string connectionString, Azure.Iot.Hub.Service.IotHubServiceClientOptions options) { }
+        public IotHubServiceClient(System.Uri endpoint, Azure.Iot.Hub.Service.Authentication.IotHubSasCredential credential, Azure.Iot.Hub.Service.IotHubServiceClientOptions options = null) { }
         public virtual Azure.Iot.Hub.Service.DevicesClient Devices { get { throw null; } }
         public virtual Azure.Iot.Hub.Service.FilesClient Files { get { throw null; } }
         public virtual Azure.Iot.Hub.Service.JobsClient Jobs { get { throw null; } }
@@ -60,10 +59,10 @@ namespace Azure.Iot.Hub.Service
         public virtual Azure.Iot.Hub.Service.ModulesClient Modules { get { throw null; } }
         public virtual Azure.Iot.Hub.Service.StatisticsClient Statistics { get { throw null; } }
     }
-    public partial class IoTHubServiceClientOptions : Azure.Core.ClientOptions
+    public partial class IotHubServiceClientOptions : Azure.Core.ClientOptions
     {
-        public IoTHubServiceClientOptions(Azure.Iot.Hub.Service.IoTHubServiceClientOptions.ServiceVersion version = Azure.Iot.Hub.Service.IoTHubServiceClientOptions.ServiceVersion.V2020_03_13) { }
-        public Azure.Iot.Hub.Service.IoTHubServiceClientOptions.ServiceVersion Version { get { throw null; } }
+        public IotHubServiceClientOptions(Azure.Iot.Hub.Service.IotHubServiceClientOptions.ServiceVersion version = Azure.Iot.Hub.Service.IotHubServiceClientOptions.ServiceVersion.V2020_03_13) { }
+        public Azure.Iot.Hub.Service.IotHubServiceClientOptions.ServiceVersion Version { get { throw null; } }
         public enum ServiceVersion
         {
             V2020_03_13 = 1,
@@ -106,6 +105,17 @@ namespace Azure.Iot.Hub.Service
     public partial class StatisticsClient
     {
         public StatisticsClient() { }
+    }
+}
+namespace Azure.Iot.Hub.Service.Authentication
+{
+    public partial class IotHubSasCredential
+    {
+        public IotHubSasCredential(string sharedAccessPolicy, string sharedAccessKey, System.TimeSpan timeToLive = default(System.TimeSpan)) { }
+        public System.Uri Endpoint { get { throw null; } }
+        public System.TimeSpan SasTokenTimeToLive { get { throw null; } }
+        public string SharedAccessKey { get { throw null; } }
+        public string SharedAccessPolicy { get { throw null; } }
     }
 }
 namespace Azure.Iot.Hub.Service.Models
